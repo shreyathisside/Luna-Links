@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Luna Links</title>
+    <!-- FIX: Updated to use style.css for consistency across all files -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html" class="logo"><i class="fas fa-gem"></i>Luna Links</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="chains.html">Chains</a>
+                <a href="ear-cuffs.html">Ear Cuffs</a>
+                <a href="charms.html">Charms</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-icons">
+                <!-- IMPORTANT FIX: Change to href="#" and add id="login-icon" to trigger modal -->
+                <a href="#" id="login-icon" class="icon-link"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="icon-link active"><i class="fas fa-shopping-cart"></i><span class="cart-count"></span></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <!-- FIX: Title moved out of container and aligned top/center -->
+        <h1 class="page-title">Shopping Cart</h1> 
+        <div class="cart-container">
+            <!-- Cart Items Container -->
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here by js/main.js -->
+            </div>
+            
+            <!-- Cart Summary -->
+            <div class="cart-summary-container">
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span class="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span>$10.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span>$0.00</span>
+                    </div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Using a clean sans-serif like Inter for general text */
+  font-family: 'Inter', sans-serif; 
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* --- Header and Navigation --- */
+header, .navbar {
+  /* FIX: New requested light-brown background color */
+  background-color: #deb887; 
+  padding: 1.5rem 0; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+  position: relative;
+  z-index: 10;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  /* Custom font style to mimic the luxury serif look (Image 6) */
+  font-family: Georgia, serif; 
+  font-size: 3rem; 
+  font-weight: 700; 
+  color: #5d4037; /* Deep brown color */
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 0px; 
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 2.2rem;
+    color: #795548;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #5d4037; 
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 0.5rem 0.2rem; 
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-bottom: 2px solid transparent; 
+}
+
+.nav-links a:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #795548; /* Subtle hover effect */
+}
+
+.nav-links a.active {
+  background-color: transparent;
+  /* Exact underline style matching the image */
+  border-bottom: 2px solid #5d4037; 
+  font-weight: 600;
+}
+
+.nav-icons a {
+    color: #5d4037; /* Brown icon color */
+    font-size: 1.3rem;
+    margin-left: 1.5rem; 
+    transition: color 0.3s;
+}
+
+.nav-icons a:hover {
+    color: #795548; /* Darker hover for icons */
+}
+
+/* --- FIX: Hiding the unwanted form element if it exists in other files --- */
+.login-section {
+    display: none !important; 
+}
+
+/* --- Hero Video Section & Arched Gallery (Restored for Homepage) --- */
+.hero-video-container {
+    /* RESTORED: Height for big hero section */
+    height: 90vh; 
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3); 
+    padding: 2rem 4rem;
+    border-radius: 12px;
+    max-width: 90%;
+}
+
+.arch-gallery-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: white;
+}
+
+.arch-images-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- FIX: Arch Image Styling (FINAL) --- */
+/* Target the parent div which wraps the image for better control */
+.arch-images-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Ensure the container respects the image size for layout */
+    width: 250px; 
+    height: auto;
+}
+
+.arch-images-container img {
+    /* Set fixed size for uniform appearance */
+    width: 250px; 
+    height: 250px;
+    object-fit: cover;
+    /* Apply the Arch/Circular shape */
+    border-radius: 50%; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid #deb887; /* Light brown border for definition */
+    transition: transform 0.3s ease;
+}
+
+.arch-images-container img:hover {
+    transform: scale(1.05);
+}
+
+.arch-images-container h3 {
+    font-family: Georgia, serif;
+    color: #5d4037;
+    margin-top: 1rem;
+}
+
+
+/* --- Featured Banner (Handcrafted & Ethical) --- */
+.featured-banner {
+    background-color: #795548; /* Medium Brown/Taupe */
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.banner-content {
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+/* --- FIX: Small, Centered MODAL STYLING (For all pages) --- */
+
+.auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-modal .modal-content {
+    background-color: white; /* White background */
+    padding: 2rem;
+    padding-top: 3.5rem; 
+    border-radius: 12px;
+    width: 90%;
+    /* FIX: Set a defined, reasonable width/height */
+    max-width: 380px; 
+    max-height: 520px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow-y: auto; 
+}
+
+/* --- Login/Signup Modal Elements Styling (Final Aesthetic Fix) --- */
+
+.auth-form h2 {
+    font-size: 1.8rem;
+    font-family: Georgia, serif;
+    color: #5d4037;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #5d4037;
+    font-size: 0.9rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #deb887; /* Light brown border */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #5d4037;
+}
+
+.auth-form .auth-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #795548; /* Medium Brown button */
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.auth-tab.active {
+    color: #5d4037;
+    font-weight: 700;
+    border-bottom: 2px solid #795548; /* Darker brown underline for active tab */
+}
+
+
+/* --- Cart Page Styling (Kept Clean) --- */
+.cart-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-family: Georgia, serif;
+    color: #5d4037;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.cart-item {
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+}
+/* ... rest of the cart styles are assumed to be correct now */

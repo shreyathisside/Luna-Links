@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Links - Home | Timeless Jewelry</title>
+    <!-- Using the main style.css for consistency -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Using js/main.js which is referenced in other pages like cart.html -->
+    <script src="js/main.js"></script> 
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html" class="logo"><i class="fas fa-gem"></i>Luna Links</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="chains.html">Chains</a>
+                <a href="ear-cuffs.html">Ear Cuffs</a>
+                <a href="charms.html">Charms</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-icons">
+                <!-- IMPORTANT FIX: Used href="#" to prevent page reload on modal trigger -->
+                <a href="#" id="login-icon" class="icon-link"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Main Hero Section: Video Background with Tagline -->
+        <section class="hero-video-container">
+            <video autoplay muted loop id="heroVideo" class="hero-video">
+                <source src="https://www.pexels.com/download/video/4974756/" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <p class="tagline">Elegance is not a moment, but a timeless link.</p>
+                <h2 class="hero-title">Crafted for Your Story.</h2>
+                <a href="chains.html" class="cta-button">Shop the Collection <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </section>
+
+        <!-- 2. Arched Image Gallery Section -->
+        <section class="arch-gallery-section">
+            <h2>Discover Our Signature Collections</h2>
+            <p class="arch-subtitle">Explore the perfect piece for every chapter of your life.</p>
+            <div class="arch-images-container">
+                
+                <!-- Arch Item 1: Chains -->
+                <a href="chains.html" class="arch-item">
+                    <img src="https://images.unsplash.com/photo-1633555234540-bb6db7f1ab80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmVja2NoYWluc3xlbnwwfHwwfHx8MA%3D%3D" alt="Chains Collection" loading="lazy">
+                    <h3>Chains</h3>
+                </a>
+
+                <!-- Arch Item 2: Charms -->
+                <a href="charms.html" class="arch-item">
+                    <img src="https://images.unsplash.com/photo-1749672327818-2bf0797689dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhcm1zfGVufDB8fDB8fHww" alt="Charms Collection" loading="lazy">
+                    <h3>Charms</h3>
+                </a>
+
+                <!-- Arch Item 3: Ear Cuffs -->
+                <a href="ear-cuffs.html" class="arch-item">
+                    <img src="https://images.pexels.com/photos/9649312/pexels-photo-9649312.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ear Cuffs Collection" loading="lazy">
+                    <h3>Ear Cuffs</h3>
+                </a>
+
+            </div>
+        </section>
+        
+        <!-- 3. Featured Banner (Handcrafted & Ethical) -->
+        <section class="featured-banner">
+            <div class="banner-content">
+                <h3>Handcrafted & Ethical</h3>
+                <p>Every piece is a testament to sustainable luxury and meticulous craftsmanship.</p>
+                <a href="about.html" class="cta-button secondary-cta">Learn Our Story</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Luna Links. All rights reserved.</p>
+    </footer>
+</body>
+</html>
