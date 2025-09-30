@@ -1,4 +1,4 @@
- Luna Links - Artisan Jewelry Store
+Luna Links - Artisan Jewelry Store
 Project Overview
 Luna Links is a modern, high-end e-commerce website template designed for an artisan jewelry brand. It features a unique, custom, and cohesive visual identity built around a refined Brown and Beige color palette, emphasizing luxury, elegance, and meticulous craftsmanship. The site is a fully functional front-end solution ready for backend integration.
 
